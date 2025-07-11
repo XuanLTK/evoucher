@@ -62,7 +62,7 @@ p {
 }
 
 .voucher-image {
-    max-width: auto;
+    max-width: 50%;
     height: auto;
     border: 5px solid #ffd700; /* Viền vàng cho voucher */
     border-radius: 10px;
