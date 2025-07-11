@@ -44,7 +44,7 @@ p {
 }
 
 .gift-image {
-    width: 500px; /* Điều chỉnh kích thước gói quà */
+    width: auto; /* Điều chỉnh kích thước gói quà */
     height: auto;
 }
 
@@ -62,8 +62,8 @@ p {
 }
 
 .voucher-image {
-    max-width: 50%;
-    height: 50%;
+    max-width: 70%;
+    height: 70%;
     border: 5px solid #ffd700; /* Viền vàng cho voucher */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
