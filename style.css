@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Màu nền gradient */
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.gift-box {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.gift-box:hover {
+    transform: scale(1.05);
+}
+
+.gift-image {
+    width: 200px; /* Điều chỉnh kích thước gói quà */
+    height: auto;
+}
+
+.voucher-container {
+    display: none; /* Ban đầu ẩn voucher */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.voucher-container.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.voucher-image {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #ffd700; /* Viền vàng cho voucher */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #4CAF50; /* Màu xanh lá cây */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.download-button:hover {
+    background-color: #45a049;
+}
+
+/* Hiệu ứng bong bóng bay */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: float 10s infinite ease-in-out;
+    z-index: 0;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) translateX(0); opacity: 1; }
+    50% { transform: translateY(-50px) translateX(20px); opacity: 0.8; }
+    100% { transform: translateY(0) translateX(0); opacity: 1; }
+}
